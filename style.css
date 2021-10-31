@@ -1,0 +1,189 @@
+
+.navbar{
+    position: relative;
+    z-index: 1;
+}
+.nav-scr-up{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+.navbar-custom{
+    background-color:#dfdfdf;
+}
+.container .phocov{
+    width: 50px;
+    height: 35px;
+}
+.navbar-brand{
+    font-size: 22px;
+    
+}
+
+.jumbotron{
+    background-image: url(https://previews.123rf.com/images/9dreamstudio/9dreamstudio1706/9dreamstudio170601297/80527681-businessman-morning-with-keyboard-cup-of-coffee-and-croissant-on-wooden-table-background-top-view-mo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 340px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+.jumbotron::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+.jumbotron .container{
+    z-index: 1;
+    position: relative;
+}
+
+.jumbotron .display-4 {
+    color: white;
+    margin-top: 35px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
+    
+}
+.jumbotron .lead{
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.fade-in {
+    animation: fadeIn ease .5s;
+    -webkit-animation: fadeIn ease .5s;
+    -moz-animation: fadeIn ease .5s;
+    -o-animation: fadeIn ease .5s;
+    -ms-animation: fadeIn ease .5s;
+    }
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    .fade-in-text{
+     animation: fadeInText ease 2s;
+    -webkit-animation: fadeInText ease 2s;
+    -moz-animation: fadeInText ease 2s;
+    -o-animation: fadeInText ease 2s;
+    -ms-animation: fadeInText ease 2s;
+    }
+    @keyframes fadeInText {
+        0% {opacity:0;}
+        100% {opacity:1;}
+        }
+        
+        @-moz-keyframes fadeInText {
+        0% {opacity:0;}
+        100% {opacity:1;}
+        }
+        
+        @-webkit-keyframes fadeInText {
+        0% {opacity:0;}
+        100% {opacity:1;}
+        }
+        
+        @-o-keyframes fadeInText {
+        0% {opacity:0;}
+        100% {opacity:1;}
+        }
+        
+        @-ms-keyframes fadeInText {
+        0% {opacity:0;}
+        100% {opacity:1;}
+        }
+.container{
+    text-align: center;
+}
+.container #update{
+    font-size: 32px;
+    margin-bottom: 100px;
+}
+.card{
+    margin-bottom: 30px;
+}
+footer{
+    margin-top: 100px;
+    text-align: center;
+}
+footer p{
+    color: #acacac;
+    font-size: 18px;
+}
+
+/* Desktop */
+@media (min-width: 992px) { 
+    
+    .container .phocov{
+        width: 60px;
+        height: 40px;
+    }
+    .navbar-brand{
+        font-size: 22px;
+        
+    }
+    
+    .nav-link{
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-right: 30px;
+        
+        
+    }
+   
+    
+    .jumbotron .display-4{
+        
+        margin-top: 150px;
+    }
+    
+    .jumbotron{
+        height: 640px;
+        margin-bottom: 150px;
+    }
+    .jumbotron .lead{
+        font-size: 20px;
+    }
+    .jumbotron-fluid{
+        transition: 1s;
+    }
+    .container{
+        text-align: center;
+    }
+    .container #update{
+        font-size: 42px;
+        margin-bottom: 100px;
+    }
+    .card{
+        margin-left: 0;
+    }
+}
+

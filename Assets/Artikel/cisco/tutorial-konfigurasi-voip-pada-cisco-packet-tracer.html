@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!--Local CSS-->
+  <link rel="stylesheet" href="../content.css">
+  
+  <title>Tutorial Konfigurasi VoIP Pada Cisco Packet Tracer</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="../../../index.html">
+        <img src="../../../images/cov.png"   class="phocov" alt="" loading="lazy"> Lintas IT
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../../../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../artikel.html">Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../Bio/bio.html">About Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container justify-content-center d-flex">
+    <div class="isi">
+      <h1>Tutorial Konfigurasi VoIP Pada Cisco Packet Tracer</h1>
+            <div class="row justify-content-center d-flex">
+              <div class="col-12 justify-content-center d-flex">
+                <a href="../cisco/images/content.jpg"><img src="images/content.jpg" class="rounded" alt="..."></a>
+              </div>
+            </div>
+
+    <br>
+    <p>Halo teman teman IT dan Calon IT Sekalian,  kali ini saya akan memberikan
+      tutorial cara setting telepon VoIP dengan menggunakan software Cisco Packet 
+      Tracer, Tetapi sebelumnya kita perlu tahu apa yang dimaksud dengan VoIP<br><br>
+      <h3>Pengertian VoIP</h3> 
+    <br>
+    VoIP merupakan akronim dari Voice over Internet Protocol, disebut juga IP 
+    Telephony, Internet Telephony, atau Digital Phone. Merupakan teknologi yang 
+    memanfaatkan teknologi internet untuk melakukan percakapan suara jarak jauh. 
+    Melalui media internet data suara dikonversi menjadi kode digital untuk
+     kemudian diteruskan sebagai paket-paket data di dalam jaringan, tidak melalui 
+     sirkuit analog telepon seperti biasanya.
+     <br>
+     <br>
+     <h3>Fungsi VoIP</h3>
+     <br>
+     Fungsi utama dari VoIP adalah untuk berkomunikasi secara jarak jauh dengan 
+     memanfaatkan jaringan Internet. <br>
+     <br>
+     <h3>Langkah-langkah setting VoIP</h3>
+     <br>
+     1. Buka Cisco Packet Tracer dan buat topologi seperti di atas.
+      <br><br>
+      <div class="justify-content-center d-flex">
+         <a href="images/voip1.jpeg"> <img src="images/voip1.jpeg" alt="..."></a>
+      </div>
+      <br>
+      <br>
+      2. Masuk ke menu CLI pada Router dan ketik sesuai di bawah. <br>
+      Router>enable <br>
+      Router#conf t <br>
+      Router (config) # hostname CME (untuk mengubah hostname Router Menjadi CME dan penamaan bisa disesuaikan dengan anda sendiri)
+      <br><br>
+      <div class="justify-content-center d-flex">
+        <a href="images/voip2.jpeg"> <img src="images/voip2.jpeg" alt="..."></a>
+     </div>
+     <br><br>
+     3. Atur konfigurasi interfaces pada router untuk VLAN Yang akan dibuat nanti. <br><br>
+     <div class="justify-content-center d-flex">
+      <a href="images/voip3.jpeg"> <img src="images/voip3.jpeg" alt="..."></a>
+   </div>
+   <br><br>
+   4. Buatlah DHCP Server untuk PC dan Telepon IP <br>
+   (pool DATA digunakan untuk PC sedangkan  pool VOICE digunakan untuk Telepon IP)
+   <br><br>
+   <div class="justify-content-center d-flex">
+    <a href="images/voip4.jpg"> <img src="images/voip4.jpg" alt="..."></a>
+    </div>
+    <br><br>
+   5. Atur IP Address yang akan didistribusikan dari Router dan buatlah jumlah nomor yang akan di lanjutkan dari router ke client atau biasa di sebut max-ephone.
+   <br><br>
+   <div class="justify-content-center d-flex">
+    <a href="images/voip5.jpeg"> <img src="images/voip5.jpeg" alt="..."></a>
+    </div>
+    <br><br>
+   6. Setelah itu Buatah Nomor/Dial Number yang akan diberikan ke client (untuk dial number bisa ubah sesuai kehendak anda).
+   <br><br>
+   <div class="justify-content-center d-flex">
+   <a href="images/voip6.jpeg"> <img src="images/voip6.jpeg" alt="..."></a>
+    </div>
+    <br><br>
+   7 Setelah itu kita masuk ke Switch untuk konfigurasi VLAN 10 dan 20
+   <br><br>
+   <div class="justify-content-center d-flex">
+   <a href="images/voip7.jpeg"> <img src="images/voip7.jpeg" alt="..."></a>
+    </div>
+    <br><br>
+   8. Konfigurasi interface fa0/2-5 ke VLAN 20/VOICE dan fa0/4 ke VLAN 10/DATA<br>(untuk interface fa0/X tergantung dari letak kabel yang kalian berikan ke Client Jika telepon ip Maka Masukkan Ke interfaces VOICE dan jika itu PC masukkan ke DATA)
+   <br><br>
+   <div class="justify-content-center d-flex">
+   <a href="images/voip8.jpeg"> <img src="images/voip8.jpeg" alt="..."></a>
+    </div>
+    <br><br>
+   9. Setting fa0/1 sebagai mode trunk agar ip dapat menyebar semua ke Client.
+   <br><br>
+   <div class="justify-content-center d-flex">
+   <a href="images/voip9.jpeg"> <img src="images/voip9.jpeg" alt="..."></a>
+    </div>
+    <br><br>
+   10.masuk ke telepon dan hidupkan telepon dengan men drag kabel yang ada di bawah
+   <br><br>
+   <div class="justify-content-center d-flex">
+   <a href="images/voip10.jpeg"> <img src="images/voip10.jpeg" alt="..."></a>
+    </div>
+    <br><br>
+   11. masuk ke GUI telepon lalu tunggu sampai telepon mendapatkan nomor dan setelah itu coba telepon ke nomor lain
+   <br><br>
+   <div class="justify-content-center d-flex">
+   <a href="images/voip11.png"> <img src="images/voip11.png" alt="..."></a>
+    </div>
+    <br><br>
+   12. setelah itu, masuk ke telepon yang dihubungi lalu angkat, jika berhasil maka akan bertuliskan connected
+   <br><br>
+   <div class="justify-content-center d-flex">
+   <a href="images/voip12.png"> <img src="images/voip12.png" alt="..."></a>
+    </div>
+    <br><br>
+   13. jika telepon sudah berhasil, coba telepon ke nomor pc, jika berhasil maka akan muncul nomor yang menghubungi di pc
+   <br><br>
+   <div class="justify-content-center d-flex">
+   <a href="images/voip13.png"> <img src="images/voip13.png" alt="..."></a>
+    </div>
+    <br><br>
+   14. Jika Berhasil Maka Konfigurasi telah selesai
+   <br><br>
+   <div class="justify-content-center d-flex">
+   <a href="images/voip14.png"> <img src="images/voip14.png" alt="..."></a>
+    </div>
+       <br><br><br><br>
+
+   Terima kasih telah membaca dan Sampai jumpa di artikel Saya selanjutnya
+
+    </p>
+    <footer>
+      <p>&copy;2020 All Rights Reserved by Lintas IT</p>
+  </footer>
+  </div>
+</div>
+<!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="../../../script.js"></script>
+</body>
+</html>
